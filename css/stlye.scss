@@ -20,6 +20,12 @@ $xl: 1400px;
 
 $font-family: "Inter", sans-serif;
 
+body {
+  background-color: $secondary;
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 28px;
+}
 .custom-navbar {
   background: $primary !important;
 }
