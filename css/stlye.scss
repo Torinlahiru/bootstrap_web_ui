@@ -1,8 +1,4 @@
-.navbar-nav img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
 $white: #ffffff;
 $black: #000000;
@@ -12,12 +8,22 @@ $dark: #2f2f2f;
 $light: #dce5e4;
 $body_color: #6a6a6a;
 
+$sm: 576px;
+$md: 768px;
+$xl: 1400px;
+
 $font-family: "Inter", sans-serif;
 
 body {
   font-family: $font-family;
   font-weight: 400;
   line-height: 28px;
+}
+
+.navbar-nav img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .custom-navbar {
@@ -28,6 +34,10 @@ body {
   .navbar-brand {
     font-size: 32px;
     font-weight: 600;
+
+    span {
+      color: $secondary;
+    }
   }
 
   .navbar-toggler {
@@ -49,26 +59,28 @@ body {
         transition: 0.3s all ease;
         position: relative;
 
-        &::before {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 8px;
-          right: 8px;
-          background: $secondary;
-          height: 3px;
-          opacity: 0;
-          visibility: hidden;
-          width: 0;
-          transition: 0.15s all ease-in-out;
+        @media (min-width: $md) {
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 8px;
+            right: 8px;
+            background: $secondary;
+            height: 3px;
+            width: 0;
+            opacity: 0;
+            visibility: visible;
+            transition: 0.15s all ease-in-out;
+          }
         }
 
         &:hover {
           opacity: 1;
+
           &::before {
-            opacity: 1;
-            visibility: visible;
             width: calc(100% - 16px);
+            opacity: 1;
           }
         }
 
@@ -76,10 +88,32 @@ body {
           opacity: 1;
 
           &::before {
-            opacity: 1;
-            visibility: visible;
             width: calc(100% - 16px);
+            opacity: 1;
           }
+        }
+      }
+    }
+  }
+
+  .custom-navbar-cta {
+    margin-left: 0 !important;
+    flex-direction: row;
+
+    li {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @media (min-width: $md) {
+      margin-left: 40px !important;
+
+      li {
+        margin-left: 0;
+        margin-right: 0;
+
+        &:first-child {
+          margin-right: 20px;
         }
       }
     }

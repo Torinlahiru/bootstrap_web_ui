@@ -1,14 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+}
+
 .navbar-nav img {
   width: 24px;
   height: 24px;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-body {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  line-height: 28px;
 }
 
 .custom-navbar {
@@ -19,6 +20,9 @@ body {
 .custom-navbar .navbar-brand {
   font-size: 32px;
   font-weight: 600;
+}
+.custom-navbar .navbar-brand span {
+  color: #f9bf29;
 }
 .custom-navbar .navbar-toggler {
   border-color: transparent;
@@ -34,32 +38,52 @@ body {
   transition: 0.3s all ease;
   position: relative;
 }
-.custom-navbar .navbar-nav li a::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 8px;
-  right: 8px;
-  background: #f9bf29;
-  height: 3px;
-  opacity: 0;
-  visibility: hidden;
-  width: 0;
-  transition: 0.15s all ease-in-out;
+@media (min-width: 768px) {
+  .custom-navbar .navbar-nav li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    right: 8px;
+    background: #f9bf29;
+    height: 3px;
+    width: 0;
+    opacity: 0;
+    visibility: visible;
+    transition: 0.15s all ease-in-out;
+  }
 }
 .custom-navbar .navbar-nav li a:hover {
   opacity: 1;
 }
 .custom-navbar .navbar-nav li a:hover::before {
-  opacity: 1;
-  visibility: visible;
   width: calc(100% - 16px);
+  opacity: 1;
 }
 .custom-navbar .navbar-nav li a.active {
   opacity: 1;
 }
 .custom-navbar .navbar-nav li a.active::before {
-  opacity: 1;
-  visibility: visible;
   width: calc(100% - 16px);
+  opacity: 1;
+}
+.custom-navbar .custom-navbar-cta {
+  margin-left: 0 !important;
+  flex-direction: row;
+}
+.custom-navbar .custom-navbar-cta li {
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  .custom-navbar .custom-navbar-cta {
+    margin-left: 40px !important;
+  }
+  .custom-navbar .custom-navbar-cta li {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .custom-navbar .custom-navbar-cta li:first-child {
+    margin-right: 20px;
+  }
 }/*# sourceMappingURL=stlye.css.map */
