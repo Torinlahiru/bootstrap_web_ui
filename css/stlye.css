@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+html,
+body {
+  overflow: hidden;
+  position: relative;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -103,10 +109,21 @@ body {
   color: #ffffff;
   margin-bottom: 54px;
 }
+@media (min-width: 1400px) {
+  .hero h1 {
+    font-size: 54px;
+  }
+}
 .hero p {
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 30px;
 }
 .hero .hero-img-wrap {
   position: absolute;
+}
+.hero .hero-img-wrap img {
+  top: -40px;
+  right: -20px;
+  z-index: 0;
+  max-width: 780px;
 }/*# sourceMappingURL=stlye.css.map */
