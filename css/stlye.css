@@ -161,4 +161,13 @@ body {
 .btn.btn-secondary:hover {
   background: #f8b810;
   border-color: #f9bf29;
+}
+.btn.btn-white-outline {
+  background: transparent;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.btn.btn-white-outline:hover {
+  border-color: white;
+  color: #ffffff;
 }/*# sourceMappingURL=stlye.css.map */

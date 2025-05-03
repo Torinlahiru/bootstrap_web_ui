@@ -195,4 +195,13 @@ body {
       border-color: $secondary;
     }
   }
+  &.btn-white-outline {
+    background: transparent;
+    border-width: 2px;
+    border-color: rgba($color: $white, $alpha: 0.3);
+    &:hover {
+      border-color: rgba($color: $white, $alpha: 1);
+      color: $white;
+    }
+  }
 }
