@@ -81,10 +81,6 @@ body {
   margin-left: 0;
   margin-right: 0;
 }
-.custom-navbar .custom-navbar-cta li:hover {
-  background-color: #f9bf29;
-  border-radius: 5px;
-}
 @media (min-width: 768px) {
   .custom-navbar .custom-navbar-cta {
     margin-left: 40px !important;
@@ -123,10 +119,9 @@ body {
   margin-bottom: 30px;
 }
 .hero .hero-img-wrap {
-  position: relative;
+  position: absolute;
 }
 .hero .hero-img-wrap img {
-  position: absolute;
   top: -40px;
   right: -20px;
   z-index: 0;
@@ -155,5 +150,24 @@ body {
   border-color: #3b5d50;
 }
 .btn.btn-primary:hover {
-  background: dark;
+  background: #222222;
+  border-color: #222222;
+}
+.btn.btn-secondary {
+  color: #2f2f2f;
+  background: #f9bf29;
+  border-color: #f9bf29;
+}
+.btn.btn-secondary:hover {
+  background: #f8b810;
+  border-color: #f9bf29;
+}
+.btn.btn-white-outline {
+  background: transparent;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.btn.btn-white-outline:hover {
+  border-color: white;
+  color: #ffffff;
 }/*# sourceMappingURL=stlye.css.map */
