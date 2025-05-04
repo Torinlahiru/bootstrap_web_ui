@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
+// Variables
 $white: #ffffff;
 $black: #000000;
 $primary: #3b5d50;
@@ -15,23 +16,27 @@ $xxl: 1400px;
 
 $font-family: "Inter", sans-serif;
 
+// Base styles
 html,
 body {
-  overflow: hidden;
-  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
+
 body {
   font-family: $font-family;
   font-weight: 400;
   line-height: 28px;
 }
 
+// Navbar icons
 .navbar-nav img {
   width: 24px;
   height: 24px;
   object-fit: contain;
 }
 
+// Custom Navbar
 .custom-navbar {
   background: $primary !important;
   padding-top: 20px;
@@ -83,7 +88,6 @@ body {
 
         &:hover {
           opacity: 1;
-
           &::before {
             width: calc(100% - 16px);
             opacity: 1;
@@ -92,7 +96,6 @@ body {
 
         &.active {
           opacity: 1;
-
           &::before {
             width: calc(100% - 16px);
             opacity: 1;
@@ -109,6 +112,11 @@ body {
     li {
       margin-left: 0;
       margin-right: 0;
+
+      &:hover {
+        background-color: $secondary; // Highlight li on hover
+        border-radius: 5px;
+      }
     }
 
     @media (min-width: $md) {
@@ -126,14 +134,17 @@ body {
   }
 }
 
+// Hero section
 .hero {
   background: $primary;
   padding: calc(8rem - 30px) 0 8rem 0;
+
   .intro-excerpt {
     max-width: 450px;
     position: relative;
     z-index: 4;
   }
+
   h1 {
     font-weight: 700;
     font-size: 44px;
@@ -144,14 +155,17 @@ body {
       font-size: 54px;
     }
   }
+
   p {
-    color: rgb($white, 0.5);
+    color: rgba($white, 0.5);
     margin-bottom: 30px;
   }
 
   .hero-img-wrap {
-    position: absolute;
+    position: relative;
+
     img {
+      position: absolute;
       top: -40px;
       right: -20px;
       z-index: 0;
@@ -160,6 +174,7 @@ body {
   }
 }
 
+// Buttons
 .btn {
   font-weight: 600;
   padding: 12px 30px;
@@ -167,11 +182,13 @@ body {
   color: $white;
   background: $dark;
   border-color: $dark;
+
   &:hover {
     color: $white;
-    background: darken($color: $dark, $amount: 5%);
-    border-color: darken($color: $dark, $amount: 5%);
+    background: darken($dark, 5%);
+    border-color: darken($dark, 5%);
   }
+
   &:active,
   &:focus {
     outline: none !important;
@@ -181,27 +198,9 @@ body {
   &.btn-primary {
     background: $primary;
     border-color: $primary;
+
     &:hover {
-      background: darken($color: $dark, $amount: 5%);
-      border-color: darken($color: $dark, $amount: 5%);
-    }
-  }
-  &.btn-secondary {
-    color: $dark;
-    background: $secondary;
-    border-color: $secondary;
-    &:hover {
-      background: darken($color: $secondary, $amount: 5%);
-      border-color: $secondary;
-    }
-  }
-  &.btn-white-outline {
-    background: transparent;
-    border-width: 2px;
-    border-color: rgba($color: $white, $alpha: 0.3);
-    &:hover {
-      border-color: rgba($color: $white, $alpha: 1);
-      color: $white;
+      background: dark;
     }
   }
 }
