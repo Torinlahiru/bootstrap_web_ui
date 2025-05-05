@@ -208,10 +208,10 @@ body {
   display: inline-block;
   background: #2f2f2f;
   bottom: 15px;
-  left: 50px;
+  left: 50%;
   transform: translateX(-50%);
   margin-bottom: -17.5px;
-  background-repeat: 50%;
+  border-radius: 50%;
   opacity: 0;
   visibility: hidden;
   transition: 0.3s all ease;
@@ -220,18 +220,18 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50, -50%);
+  transform: translate(-50%, -50%);
 }
-.product-section .product-item::before {
+.product-section .product-item:before {
   bottom: 0;
   left: 0;
   right: 0;
   position: absolute;
   content: "";
   background: #dce5e4;
-  height: 70%;
+  height: 0%;
   z-index: -1;
-  background-repeat: 10px;
+  border-radius: 10px;
   transition: 0.3s all ease;
 }
 .product-section .product-item:hover .product-thumbnail {
