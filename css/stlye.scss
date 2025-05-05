@@ -236,5 +236,51 @@ body {
       color: $dark;
       text-decoration: none;
     }
+    .icon-cross {
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      display: inline-block;
+      background: $dark;
+      bottom: 15px;
+      left: 50px;
+      transform: translateX(-50%);
+      margin-bottom: -17.5px;
+      background-repeat: 50%;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s all ease;
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50, -50%);
+      }
+    }
+    &::before {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      content: "";
+      background: $light;
+      height: 70%;
+      z-index: -1;
+      background-repeat: 10px;
+      transition: 0.3s all ease;
+    }
+    &:hover {
+      .product-thumbnail {
+        top: -25px;
+      }
+      .icon-cross {
+        bottom: 0;
+        opacity: 1;
+        visibility: visible;
+      }
+      &::before {
+        height: 70%;
+      }
+    }
   }
 }
